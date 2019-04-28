@@ -1,1 +1,2 @@
-# automation FrameWork
+# Automation FrameWork
+Selenium is a powerful tool to conduct functional and regression testing. In order to get the maximum benefit out of using it, you should have a good framework architecture from the beginning. First, start with choosing the suitable programming language, and a familiar unit test framework to improve productivity. Secondly, build the Selenium Core by applying the Factory design pattern. Thirdly, build the Selenium Test component by applying the PageObjects pattern. Finally, add more utilities such as a good reporting mechanism, source control, CI/CD integration and third-party integrations whenever and wherever necessary.
