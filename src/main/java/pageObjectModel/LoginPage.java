@@ -34,7 +34,7 @@ public class LoginPage {
 	}
 
 	public String getLoginErrorMessage() throws InterruptedException {
-		String error = driver.findElement(errorMessage).getText();
-		return error;
+		return driver.findElement(errorMessage).getText();
+		
 	}
 }

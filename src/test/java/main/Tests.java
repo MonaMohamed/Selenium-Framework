@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import main.DriverManager.DriverType;
@@ -26,5 +27,10 @@ public class Tests {
 		loginPage = new LoginPage(driver);
 		loginPage.login("admin", "invalid");
 		//assertEquals(loginPage.getLoginErrorMessage(),"user name or password isnot valid");
+	}
+	
+	@DataProvider
+	public void getData() {
+		
 	}
 }
