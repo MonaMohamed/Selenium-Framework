@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12451" started-at="2019-04-28T17:45:50Z" finished-at="2019-04-28T17:46:03Z">
+  <suite name="Default suite" duration-ms="26341" started-at="2019-05-06T21:07:15Z" finished-at="2019-05-06T21:07:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12451" started-at="2019-04-28T17:45:50Z" finished-at="2019-04-28T17:46:03Z">
-      <class name="main.Tests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.Tests@21213b92]" name="setUp" is-config="true" duration-ms="11777" started-at="2019-04-28T17:45:50Z" finished-at="2019-04-28T17:46:02Z">
+    <test name="Default test" duration-ms="26341" started-at="2019-05-06T21:07:15Z" finished-at="2019-05-06T21:07:42Z">
+      <class name="cart.AddToCart">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cart.AddToCart@5ec0a365]" name="setUp" is-config="true" duration-ms="14224" started-at="2019-05-06T21:07:15Z" finished-at="2019-05-06T21:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:main.Tests@21213b92]" name="loginTest" duration-ms="642" started-at="2019-04-28T17:46:02Z" finished-at="2019-04-28T17:46:03Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:cart.AddToCart@5ec0a365]" name="initializeObjects" is-config="true" duration-ms="43" started-at="2019-05-06T21:07:29Z" finished-at="2019-05-06T21:07:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- main.Tests -->
+        </test-method> <!-- initializeObjects -->
+        <test-method status="FAIL" signature="addToCart()[pri:0, instance:cart.AddToCart@5ec0a365]" name="addToCart" duration-ms="12037" started-at="2019-05-06T21:07:30Z" finished-at="2019-05-06T21:07:42Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <button class="green-button sk-bg-clr2 sk-bg-clr2-eff button block expand" data-addtocart="" data-ajaxcart-btn="" data-track-target="" data-track-name="ajaxAddToCart" data-track-event="event22">...</button> is not clickable at point (374, 566). Other element would receive the click: <li data-track="" data-unit-id="790600580" data-item-title="Persil Power Gel Lavender Freshness With Millions OF Stain Removers,  2.65 Kg" data-seller_name="SouqEgypt" data-ean="2724459236381" data-price="71.00" data-connections="" data-available_quantity="28" data-brand="persil" data-subcategory="laundry" class="loading">...</li>
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-E34GMQO', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63482}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: 264d6003cfce0ca169f5dbf04a92653a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button class="green-button sk-bg-clr2 sk-bg-clr2-eff button block expand" data-addtocart="" data-ajaxcart-btn="" data-track-target="" data-track-name="ajaxAddToCart" data-track-event="event22">...</button> is not clickable at point (374, 566). Other element would receive the click: <li data-track="" data-unit-id="790600580" data-item-title="Persil Power Gel Lavender Freshness With Millions OF Stain Removers,  2.65 Kg" data-seller_name="SouqEgypt" data-ean="2724459236381" data-price="71.00" data-connections="" data-available_quantity="28" data-brand="persil" data-subcategory="laundry" class="loading">...</li>
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-E34GMQO', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63482}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: 264d6003cfce0ca169f5dbf04a92653a
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at pageObjectModel.ItemsOfCategoryPage.clickAddToCartBtn(ItemsOfCategoryPage.java:49)
+at pageObjectModel.ItemsOfCategoryPage.addItemsToCart(ItemsOfCategoryPage.java:61)
+at cart.AddToCart.addToCart(AddToCart.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method status="PASS" signature="exit()[pri:0, instance:cart.AddToCart@5ec0a365]" name="exit" is-config="true" duration-ms="1" started-at="2019-05-06T21:07:42Z" finished-at="2019-05-06T21:07:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+      </class> <!-- cart.AddToCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
