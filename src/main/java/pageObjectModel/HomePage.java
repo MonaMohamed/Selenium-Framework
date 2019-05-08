@@ -1,8 +1,12 @@
 package pageObjectModel;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class HomePage{
 	WebDriver driver;
@@ -11,9 +15,9 @@ public class HomePage{
 		this.driver = driver;
 	}
 	
-	private By signUp = By.xpath("//a[@class='login_to_register']");
 	private By loginButton = By.id("userNameField_topbar");
 	private By dailyDealsLink = By.xpath("//a[contains(text(),'Daily Deals')]");
+	private By searchBox = By.id("search_value");
 	
 	public void clickLogin() {
 		driver.findElement(loginButton).click();
@@ -23,4 +27,13 @@ public class HomePage{
 		driver.findElement(dailyDealsLink).click();
 	}
 	
+	public WebElement getSearchElement() {
+		return driver.findElement(searchBox);
+	}
+	
+	public void searchWithKeyword(String keyword) {
+		WebElement search = this.getSearchElement();
+		search.sendKeys(keyword);
+		search.sendKeys(Keys.ENTER);
+	}
 }

@@ -19,7 +19,7 @@ public class RegistrationPage {
 	private By submitBtn = By.id("continue");
 	private By errorMessage = By.className("error-alert");
 	
-	public void register(String userName, String password,String email) {
+	public void register(String userName, String email,String password) {
 		this.setUserName(userName);
 		this.setEmail(email);
 		this.setPassword(password);

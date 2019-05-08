@@ -1,5 +1,7 @@
 package main;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -9,7 +11,7 @@ import org.testng.annotations.Test;
 
 import main.DriverManager.DriverType;
 import pageObjectModel.*;
-import utility.ExcelUtils;
+import utility.*;
 
 public class RegistrationSc {
 	DriverManager driverManager;
@@ -17,9 +19,8 @@ public class RegistrationSc {
 	RegistrationPage registrationPage;
 	HomePage homePage;
 	LoginPage loginPage;
-	private String sTestCaseName;
-	private int iTestCaseRow;
-
+	VerifyEmailPage verifyEmailPage;
+	Random random;
 	
 	@BeforeClass
 	public void setUp() {
@@ -34,35 +35,34 @@ public class RegistrationSc {
 		homePage = new HomePage(driver);
 		registrationPage = new RegistrationPage(driver);
 		loginPage = new LoginPage(driver);
+		verifyEmailPage = new VerifyEmailPage(driver);
 	}
 	
-	@Test
-	public void registerNewUser(){
+	@Test(dataProvider="getRandomData")
+	public void registerNewUser(String userName, String email,String pass,String code){
 		homePage.clickLogin();
 		loginPage.clickRegister();
-		registrationPage.register("mona", "123456", "test@test.com");
+		registrationPage.register(userName, email, pass);
+		verifyEmailPage.verifyEmail(code);
+		assertEquals(verifyEmailPage.getVerifyErrorMessage(),"Invalid code. Please check your code and try again.");
 	}
 	
-//	 @DataProvider
-//	  public Object[][] Authentication() throws Exception{
-//		    // Setting up the Test Data Excel file
-//		 	ExcelUtils.setExcelFile("/automationFrame/src/test/java/testData/RegistrationData.xlsx","Sheet1");
-//		 	
-//		 	sTestCaseName = this.toString();
-//		  	// From above method we get long test case name including package and class name etc.
-//		  	// The below method will refine your test case name, exactly the name use have used
-//		  	sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
-//		   
-//		  	// Fetching the Test Case row number from the Test Data Sheet
-//		    // Getting the Test Case name to get the TestCase row from the Test Data Excel sheet
-//		 	iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
-//
-//		    Object[][] testObjArray = ExcelUtils.getTableArray("/automationFrame/src/test/java/testData/TestData.xlsx","Sheet1",iTestCaseRow);
-//		    return (testObjArray);
-//	 }
+	
+	@DataProvider
+	public Object[][] getRandomData(){
+		random = new Random();
+		Object[][] userData = new Object[1][4];
+		
+		userData[0][0] =  random.randomAlphaNumeric();
+		userData[0][1] =  random.randomAlphaNumeric()+"@test.com";
+		userData[0][2] = "123456";
+		userData[0][3] = "123456";
+		
+		return userData;
+	}
 	
 	@AfterMethod
 	public void exit() {
-		//driver.quit();
+		driver.quit();
 	}
 }

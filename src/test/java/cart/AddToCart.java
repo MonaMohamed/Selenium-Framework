@@ -1,7 +1,5 @@
 package cart;
 
-import java.util.concurrent.TimeoutException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
