@@ -1,6 +1,9 @@
 package cart;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -18,7 +21,9 @@ public class SearchForItems {
 	WebDriver driver;
 	HomePage homePage;
 	SearchPage searchPage;
+	ItemDetailsPage itemDetailsPage;
 	ExcelUtils excelUtils;
+	private int cartCount=0;
 	
 	@BeforeClass
 	public void setUp() {
@@ -37,12 +42,23 @@ public class SearchForItems {
 	@Test(dataProvider="getSearchData")
 	public void searchForItems(String itemTitle , String itemPrice) {
 		homePage.searchWithKeyword(itemTitle);
+		WebElement item = searchPage.findCertainElement(itemTitle);
+		String title = searchPage.getItemTitle(item);
+		String price = searchPage.getItemPrice(item);
+		assertEquals(title,itemTitle);
+		assertEquals(price,itemPrice);
+		searchPage.getItemDetailsPage(item);
+		searchPage.addItemToCart();
+		searchPage.refreshPage();
+		String cartCountS = searchPage.getCartCount();
+		assertEquals(Integer.parseInt(cartCountS),++cartCount);
 	}
 	
 	 @DataProvider
 	 public Object[][] getSearchData() throws Exception{
 		 excelUtils = new ExcelUtils();
 	     Object[][] testObjArray = excelUtils.getTableArray("/automationFrame/src/test/java/testData/ItemsData.xlsx","Sheet1");
+	    
 	     return (testObjArray);
 	 }
 }

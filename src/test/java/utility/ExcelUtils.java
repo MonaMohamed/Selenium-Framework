@@ -26,17 +26,15 @@ public class ExcelUtils {
 				ExcelWSheet = ExcelWBook.getSheet(SheetName);
 			    int startRow = 1;
 		     	int startCol = 0;
-				int ci,cj;
+				int ci=0,cj=0;
 				int totalRows = ExcelWSheet.getLastRowNum();
 				// you can write a function as well to get Column count
 				int totalCols = 2;
 				tabArray=new String[totalRows][totalCols];
-				ci=0;
-				for (int i=startRow;i<=totalRows;i++, ci++) {           	   
-					cj=0;
-					for (int j=startCol;j<=totalCols;j++, cj++){
-					   tabArray[ci][cj]=getCellData(i,j);
-					   System.out.println(tabArray[ci][cj]);  
+				for (int i=startRow;i<totalRows;i++) {           	   
+					for (int j=startCol;j<totalCols;j++){
+					   tabArray[i][j]=getCellData(i,j);
+					   System.out.println(tabArray[i][j]);  
 					}
 				}
 		   }catch (FileNotFoundException e){
@@ -47,7 +45,7 @@ public class ExcelUtils {
 				System.out.println("Could not read the Excel sheet");
 				e.printStackTrace();
 			}
-			return(tabArray);
+			return tabArray;
 		}
 
 		public static String getCellData(int RowNum, int ColNum) throws Exception {

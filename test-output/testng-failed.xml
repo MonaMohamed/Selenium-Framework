@@ -7,7 +7,7 @@
         <methods>
           <include name="initializeObjects"/>
           <include name="setUp"/>
-          <include name="searchForItems"/>
+          <include name="searchForItems" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- cart.SearchForItems -->
     </classes>
