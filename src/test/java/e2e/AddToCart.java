@@ -1,6 +1,11 @@
-package cart;
+package e2e;
+
+import static org.testng.Assert.assertEquals;
+
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +23,8 @@ public class AddToCart {
 	DailyDealsPage dailyDealsPage;
 	CategoriesOfCategoryPage itemsPage;
 	ItemsOfCategoryPage itemsOfCategoryPage;
-	private int rowIndex = 2;
-	private int blockIndex = 2;
+	private int rowIndex = 1;
+	private int blockIndex = 1;
 	private int numOfItems = 4;
 
 	
@@ -45,10 +50,17 @@ public class AddToCart {
 	    dailyDealsPage.getCategory();
 	    itemsPage.getblock(blockIndex, rowIndex);
 	    itemsOfCategoryPage.addItemsToCart(numOfItems);
+	    itemsOfCategoryPage.openCart();
+	    int cartSize = itemsOfCategoryPage.getCartSize();
+	    String total = itemsOfCategoryPage.sumPrice(numOfItems);
+	    String grandTotal = itemsOfCategoryPage.getGrandTotal();
+	    
+	    assertEquals(cartSize,numOfItems);
+	    assertEquals(total+'0',grandTotal);
 	}
 	
 	@AfterMethod
 	public void exit() {
-		//driver.quit();
+		driver.quit();
 	}
 }

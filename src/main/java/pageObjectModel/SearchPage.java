@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,12 +49,13 @@ public class SearchPage{
 	
 	public WebElement findCertainElement(String title) {
 		List<WebElement> allElements = this.getSearchResult();
-		for(int i=0; i < allElements.size();i++) {
-			String searchedTitle = allElements.get(i).findElement(itemTitle).getText();
-			if(title.equals(searchedTitle)) {
-				return allElements.get(i);
+			System.out.println(title);
+			for(int i=0; i < allElements.size();i++) {
+				String searchedTitle = allElements.get(i).findElement(itemTitle).getText();
+				if(title.contains(searchedTitle)) {
+					return allElements.get(i);
+				}
 			}
-		}
 		return null;
 	}
 	
@@ -61,20 +63,17 @@ public class SearchPage{
 		item.findElement(itemDetailsLink).sendKeys(Keys.chord(Keys.CONTROL,Keys.RETURN));
 	}
 	
-	public String getCartCount() {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(cartCount));
-		return driver.findElement(cartCount).getText();
-	}
-	
 	public void addItemToCart() {
 		tabs2 = new ArrayList<String> (driver.getWindowHandles());
-	    driver.switchTo().window(tabs2.get(1));
-		itemDetailsPage = new ItemDetailsPage(driver);
+	    driver.switchTo().window(tabs2.get(tabs2.size()-1));
 		itemDetailsPage.addToCart();
 	}
 	
 	public void refreshPage() {
 		driver.navigate().refresh();
+	}
+	
+	public void clearSearchBox() {
+		driver.findElement(searchBox).clear();
 	}
 }

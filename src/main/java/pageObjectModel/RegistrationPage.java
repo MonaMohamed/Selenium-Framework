@@ -2,6 +2,8 @@ package pageObjectModel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage {
 	WebDriver driver;
@@ -18,6 +20,7 @@ public class RegistrationPage {
 	private By passCheckBox = By.name("passwordCheck");
 	private By submitBtn = By.id("continue");
 	private By errorMessage = By.className("error-alert");
+	private By alertMessage = By.xpath("//div[@class='a-box-inner a-alert-container']");
 	
 	public void register(String userName, String email,String password) {
 		this.setUserName(userName);
@@ -50,5 +53,11 @@ public class RegistrationPage {
 	public String getLoginErrorMessage() throws InterruptedException {
 		return driver.findElement(errorMessage).getText();
 		
+	}
+	
+	public String getAlert() {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(alertMessage));
+		return driver.findElement(alertMessage).getText();
 	}
 }

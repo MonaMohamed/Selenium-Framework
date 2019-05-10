@@ -3,6 +3,7 @@ package main;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -43,8 +44,13 @@ public class RegistrationSc {
 		homePage.clickLogin();
 		loginPage.clickRegister();
 		registrationPage.register(userName, email, pass);
-		verifyEmailPage.verifyEmail(code);
-		assertEquals(verifyEmailPage.getVerifyErrorMessage(),"Invalid code. Please check your code and try again.");
+		String alert = registrationPage.getAlert();
+		if(!alert.isEmpty()) {
+			assertEquals(alert,"There was a problem\n" + "Enter the characters as they are given in the challenge.");
+		}else {
+			verifyEmailPage.verifyEmail(code);
+			assertEquals(verifyEmailPage.getVerifyErrorMessage(),"Invalid code. Please check your code and try again.");
+		}
 	}
 	
 	
