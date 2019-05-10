@@ -68,7 +68,7 @@ public class SearchForItems {
 	 @DataProvider
 	 public Object[][] getSearchData() throws Exception{
 		 excelUtils = new ExcelUtils();
-	     Object[][] testObjArray = excelUtils.getExcelData("/automationFrame/src/test/java/testData/ItemsData.xlsx","Sheet1");
+	     Object[][] testObjArray = excelUtils.getExcelData("/"+System.getProperty("user.dir")+"/src/test/java/testData/ItemsData.xlsx","Sheet1");
 	    
 	     return testObjArray;
 	 }

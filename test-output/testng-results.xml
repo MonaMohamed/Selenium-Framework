@@ -1,51 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80657" started-at="2019-05-10T15:45:13Z" finished-at="2019-05-10T15:46:34Z">
+  <suite name="Default suite" duration-ms="53690" started-at="2019-05-10T20:19:06Z" finished-at="2019-05-10T20:20:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80657" started-at="2019-05-10T15:45:13Z" finished-at="2019-05-10T15:46:34Z">
-      <class name="main.RegistrationSc">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.RegistrationSc@3e9b1010]" name="setUp" is-config="true" duration-ms="49935" started-at="2019-05-10T15:45:13Z" finished-at="2019-05-10T15:46:03Z">
+    <test name="Default test" duration-ms="53690" started-at="2019-05-10T20:19:06Z" finished-at="2019-05-10T20:20:00Z">
+      <class name="e2e.SearchForItems">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="setUp" is-config="true" duration-ms="23470" started-at="2019-05-10T20:19:06Z" finished-at="2019-05-10T20:19:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:main.RegistrationSc@3e9b1010]" name="initializeObjects" is-config="true" duration-ms="7" started-at="2019-05-10T15:46:03Z" finished-at="2019-05-10T15:46:03Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="initializeObjects" is-config="true" duration-ms="7" started-at="2019-05-10T20:19:30Z" finished-at="2019-05-10T20:19:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="registerNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:main.RegistrationSc@3e9b1010]" name="registerNewUser" duration-ms="29990" started-at="2019-05-10T15:46:03Z" data-provider="getRandomData" finished-at="2019-05-10T15:46:33Z">
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="searchForItems" duration-ms="15957" started-at="2019-05-10T20:19:30Z" data-provider="getSearchData" finished-at="2019-05-10T20:19:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[PDUP3T2]]>
+                <![CDATA[Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[9EC18BX@test.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456]]>
+                <![CDATA[1,499.00]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerNewUser -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:main.RegistrationSc@3e9b1010]" name="exit" is-config="true" duration-ms="680" started-at="2019-05-10T15:46:33Z" finished-at="2019-05-10T15:46:34Z">
+        </test-method> <!-- searchForItems -->
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="initializeObjects" is-config="true" duration-ms="0" started-at="2019-05-10T20:19:46Z" finished-at="2019-05-10T20:19:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeObjects -->
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="searchForItems" duration-ms="12476" started-at="2019-05-10T20:19:46Z" data-provider="getSearchData" finished-at="2019-05-10T20:19:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nokia 105 -2017 , 4MB , 2G , Blue]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[359.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForItems -->
+        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@3e9b1010]" name="exit" is-config="true" duration-ms="784" started-at="2019-05-10T20:19:59Z" finished-at="2019-05-10T20:20:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
-      </class> <!-- main.RegistrationSc -->
+      </class> <!-- e2e.SearchForItems -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

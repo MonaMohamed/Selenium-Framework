@@ -44,8 +44,8 @@ public class RegistrationSc {
 		homePage.clickLogin();
 		loginPage.clickRegister();
 		registrationPage.register(userName, email, pass);
-		String alert = registrationPage.getAlert();
-		if(!alert.isEmpty()) {
+		if(!registrationPage.getAlertNotExist()) {
+			String alert = registrationPage.getAlert();
 			assertEquals(alert,"There was a problem\n" + "Enter the characters as they are given in the challenge.");
 		}else {
 			verifyEmailPage.verifyEmail(code);

@@ -2,29 +2,29 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="235121" started-at="2019-05-10T15:47:02Z" finished-at="2019-05-10T15:50:58Z">
+  <suite name="Suite" duration-ms="158222" started-at="2019-05-10T20:13:48Z" finished-at="2019-05-10T20:16:27Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="235121" started-at="2019-05-10T15:47:02Z" finished-at="2019-05-10T15:50:58Z">
+    <test name="Test" duration-ms="158222" started-at="2019-05-10T20:13:48Z" finished-at="2019-05-10T20:16:27Z">
       <class name="main.RegistrationSc">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.RegistrationSc@14acaea5]" name="setUp" is-config="true" duration-ms="13484" started-at="2019-05-10T15:47:02Z" finished-at="2019-05-10T15:47:16Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:main.RegistrationSc@14acaea5]" name="setUp" is-config="true" duration-ms="10872" started-at="2019-05-10T20:13:48Z" finished-at="2019-05-10T20:13:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:main.RegistrationSc@14acaea5]" name="initializeObjects" is-config="true" duration-ms="9" started-at="2019-05-10T15:47:16Z" finished-at="2019-05-10T15:47:16Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:main.RegistrationSc@14acaea5]" name="initializeObjects" is-config="true" duration-ms="12" started-at="2019-05-10T20:13:59Z" finished-at="2019-05-10T20:13:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="registerNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:main.RegistrationSc@14acaea5]" name="registerNewUser" duration-ms="18847" started-at="2019-05-10T15:47:16Z" data-provider="getRandomData" finished-at="2019-05-10T15:47:35Z">
+        <test-method status="PASS" signature="registerNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:main.RegistrationSc@14acaea5]" name="registerNewUser" duration-ms="7893" started-at="2019-05-10T20:13:59Z" data-provider="getRandomData" finished-at="2019-05-10T20:14:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[HWZZ0L0]]>
+                <![CDATA[2JLTTOC]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[A53L9IZ@test.com]]>
+                <![CDATA[8OJTVDC@test.com]]>
               </value>
             </param>
             <param index="2">
@@ -41,21 +41,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerNewUser -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:main.RegistrationSc@14acaea5]" name="exit" is-config="true" duration-ms="1277" started-at="2019-05-10T15:47:35Z" finished-at="2019-05-10T15:47:36Z">
+        <test-method status="PASS" signature="exit()[pri:0, instance:main.RegistrationSc@14acaea5]" name="exit" is-config="true" duration-ms="713" started-at="2019-05-10T20:14:07Z" finished-at="2019-05-10T20:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
       </class> <!-- main.RegistrationSc -->
       <class name="e2e.SearchForItems">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="setUp" is-config="true" duration-ms="31494" started-at="2019-05-10T15:49:12Z" finished-at="2019-05-10T15:49:44Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="setUp" is-config="true" duration-ms="30407" started-at="2019-05-10T20:15:06Z" finished-at="2019-05-10T20:15:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="initializeObjects" is-config="true" duration-ms="4" started-at="2019-05-10T15:49:45Z" finished-at="2019-05-10T15:49:45Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="initializeObjects" is-config="true" duration-ms="47" started-at="2019-05-10T20:15:40Z" finished-at="2019-05-10T20:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@d8355a8]" name="searchForItems" duration-ms="17581" started-at="2019-05-10T15:49:45Z" data-provider="getSearchData" finished-at="2019-05-10T15:50:03Z">
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@d8355a8]" name="searchForItems" duration-ms="29250" started-at="2019-05-10T20:15:40Z" data-provider="getSearchData" finished-at="2019-05-10T20:16:09Z">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@d8355a8]" name="searchForItems" duration-ms="49404" started-at="2019-05-10T15:50:03Z" data-provider="getSearchData" finished-at="2019-05-10T15:50:52Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="initializeObjects" is-config="true" duration-ms="0" started-at="2019-05-10T20:16:09Z" finished-at="2019-05-10T20:16:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeObjects -->
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@d8355a8]" name="searchForItems" duration-ms="15894" started-at="2019-05-10T20:16:09Z" data-provider="getSearchData" finished-at="2019-05-10T20:16:25Z">
           <params>
             <param index="0">
               <value>
@@ -87,21 +91,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="initializeObjects" is-config="true" duration-ms="0" started-at="2019-05-10T15:50:03Z" finished-at="2019-05-10T15:50:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="exit" is-config="true" duration-ms="790" started-at="2019-05-10T15:50:52Z" finished-at="2019-05-10T15:50:53Z">
+        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@d8355a8]" name="exit" is-config="true" duration-ms="755" started-at="2019-05-10T20:16:25Z" finished-at="2019-05-10T20:16:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
       </class> <!-- e2e.SearchForItems -->
+      <class name="e2e.AddToCart">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.AddToCart@46d56d67]" name="setUp" is-config="true" duration-ms="28060" started-at="2019-05-10T20:14:08Z" finished-at="2019-05-10T20:14:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.AddToCart@46d56d67]" name="initializeObjects" is-config="true" duration-ms="127" started-at="2019-05-10T20:14:36Z" finished-at="2019-05-10T20:14:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeObjects -->
+        <test-method status="PASS" signature="addToCart()[pri:0, instance:e2e.AddToCart@46d56d67]" name="addToCart" duration-ms="28760" started-at="2019-05-10T20:14:36Z" finished-at="2019-05-10T20:15:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.AddToCart@46d56d67]" name="exit" is-config="true" duration-ms="780" started-at="2019-05-10T20:15:05Z" finished-at="2019-05-10T20:15:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+      </class> <!-- e2e.AddToCart -->
       <class name="api.Test">
-        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="22" started-at="2019-05-10T15:50:53Z" finished-at="2019-05-10T15:50:53Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="27" started-at="2019-05-10T20:16:26Z" finished-at="2019-05-10T20:16:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="452" started-at="2019-05-10T15:50:53Z" data-provider="getRegions" finished-at="2019-05-10T15:50:53Z">
+        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="472" started-at="2019-05-10T20:16:26Z" data-provider="getRegions" finished-at="2019-05-10T20:16:26Z">
           <params>
             <param index="0">
               <value>
@@ -112,7 +130,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCountriesCode -->
-        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="232" started-at="2019-05-10T15:50:53Z" data-provider="getRegions" finished-at="2019-05-10T15:50:54Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="1" started-at="2019-05-10T20:16:26Z" finished-at="2019-05-10T20:16:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="170" started-at="2019-05-10T20:16:26Z" data-provider="getRegions" finished-at="2019-05-10T20:16:26Z">
           <params>
             <param index="0">
               <value>
@@ -123,11 +145,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCountriesCode -->
-        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="0" started-at="2019-05-10T15:50:53Z" finished-at="2019-05-10T15:50:53Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="1" started-at="2019-05-10T20:16:26Z" finished-at="2019-05-10T20:16:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="1255" started-at="2019-05-10T15:50:54Z" data-provider="getRegions" finished-at="2019-05-10T15:50:55Z">
+        <test-method status="PASS" signature="getCountriesCode(java.lang.String)[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesCode" duration-ms="174" started-at="2019-05-10T20:16:26Z" data-provider="getRegions" finished-at="2019-05-10T20:16:26Z">
           <params>
             <param index="0">
               <value>
@@ -138,37 +160,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCountriesCode -->
-        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="0" started-at="2019-05-10T15:50:54Z" finished-at="2019-05-10T15:50:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="getCountriesList()[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesList" duration-ms="2708" started-at="2019-05-10T15:50:55Z" finished-at="2019-05-10T15:50:58Z">
+        <test-method status="PASS" signature="getCountriesList()[pri:0, instance:api.Test@59fa1d9b]" name="getCountriesList" duration-ms="326" started-at="2019-05-10T20:16:26Z" finished-at="2019-05-10T20:16:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCountriesList -->
-        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="0" started-at="2019-05-10T15:50:55Z" finished-at="2019-05-10T15:50:55Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:api.Test@59fa1d9b]" name="init" is-config="true" duration-ms="0" started-at="2019-05-10T20:16:26Z" finished-at="2019-05-10T20:16:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- api.Test -->
-      <class name="e2e.AddToCart">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.AddToCart@46d56d67]" name="setUp" is-config="true" duration-ms="34160" started-at="2019-05-10T15:47:36Z" finished-at="2019-05-10T15:48:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.AddToCart@46d56d67]" name="initializeObjects" is-config="true" duration-ms="6" started-at="2019-05-10T15:48:10Z" finished-at="2019-05-10T15:48:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="addToCart()[pri:0, instance:e2e.AddToCart@46d56d67]" name="addToCart" duration-ms="61435" started-at="2019-05-10T15:48:10Z" finished-at="2019-05-10T15:49:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.AddToCart@46d56d67]" name="exit" is-config="true" duration-ms="730" started-at="2019-05-10T15:49:12Z" finished-at="2019-05-10T15:49:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-      </class> <!-- e2e.AddToCart -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

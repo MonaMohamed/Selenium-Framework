@@ -60,4 +60,8 @@ public class RegistrationPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(alertMessage));
 		return driver.findElement(alertMessage).getText();
 	}
+	
+	public boolean getAlertNotExist() {
+		return driver.findElements(alertMessage).isEmpty();
+	}
 }
