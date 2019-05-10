@@ -70,18 +70,10 @@ Method3 : To Run manually
   
   •TestNG set up
    Add TestNG plug in to eclipse:
-   Use http://beust.com/eclipse to add TestNG plug in to eclipse.
 	  
-    Download and add TestNG and JCommander JAR files to the Java build path. Refer below links to download jar files
+    Download and add TestNG JAR files to the Java build path. Refer below links to download jar files
     https://mvnrepository.com/artifact/org.testng/testng/6.11   
-    //Check for latest compatible versions if required
     
-    https://mvnrepository.com/artifact/com.beust/jcommander/1.69  
-    //Check for latest compatible versions if required
-
-  • Add TestNG Source jar file.
-    http://grepcode.com/project/repo1.maven.org/maven2/org.testng/testng/
-  
   • Download the project, Update the webdriver path in main/ChromeDriverManager
     Open the project using IDE and run the TestNG.xml as testng suite to obtain the results.
 
