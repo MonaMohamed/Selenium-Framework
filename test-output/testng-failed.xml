@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="e2e.SearchForItems">
+      <class name="main.Login">
         <methods>
-          <include name="exit"/>
           <include name="initializeObjects"/>
           <include name="setUp"/>
-          <include name="searchForItems" invocation-numbers="0 1"/>
+          <include name="exit"/>
+          <include name="forgetPassword" invocation-numbers="0"/>
         </methods>
-      </class> <!-- e2e.SearchForItems -->
+      </class> <!-- main.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

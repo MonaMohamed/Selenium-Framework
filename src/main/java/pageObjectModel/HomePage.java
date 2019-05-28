@@ -18,6 +18,8 @@ public class HomePage{
 	private By loginButton = By.id("userNameField_topbar");
 	private By dailyDealsLink = By.xpath("//a[contains(text(),'Daily Deals')]");
 	private By searchBox = By.id("search_value");
+	private By userName = By.id("userNameField_topbar");
+	private By allCategoriesLink = By.xpath("//*[@id='megaMenuNav']/li[1]");
 	
 	public void clickLogin() {
 		driver.findElement(loginButton).click();
@@ -25,6 +27,10 @@ public class HomePage{
 	
 	public void getDailyDeals(){
 		driver.findElement(dailyDealsLink).click();
+	}
+	
+	public void getAllCategories() {
+		driver.findElement(allCategoriesLink).click();
 	}
 	
 	public WebElement getSearchElement() {
@@ -35,5 +41,9 @@ public class HomePage{
 		WebElement search = this.getSearchElement();
 		search.sendKeys(keyword);
 		search.sendKeys(Keys.ENTER);
+	}
+	
+	public String getUserName() {
+		return driver.findElement(userName).getText().toString();
 	}
 }

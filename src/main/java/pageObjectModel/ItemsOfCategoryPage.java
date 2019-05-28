@@ -1,10 +1,6 @@
 package pageObjectModel;
 
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.fail;
-
 import java.util.List;
 
 import org.openqa.selenium.By;

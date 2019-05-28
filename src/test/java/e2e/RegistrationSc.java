@@ -1,4 +1,4 @@
-package main;
+package e2e;
 
 import static org.testng.Assert.assertEquals;
 
@@ -10,6 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import main.DriverManager;
+import main.DriverManagerFactory;
 import main.DriverManager.DriverType;
 import pageObjectModel.*;
 import utility.*;
