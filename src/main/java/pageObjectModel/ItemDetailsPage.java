@@ -33,6 +33,16 @@ public class ItemDetailsPage{
 		return item.findElement(itemTitle).getText();
 	}
 	
+	public String getSingleItemTitle() {
+		return driver.findElement(itemTitle).getText();
+	}
+	
+	public double getSingleItemPrice() {
+		String priceS = driver.findElement(itemPrice).getText();
+		String[] price = priceS.split(" ");
+		return Double.parseDouble(price[0]);
+	}
+	
 	public void addToCart(){
 		shoppingCartPage.addToCart();
 	}

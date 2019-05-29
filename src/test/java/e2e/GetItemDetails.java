@@ -21,12 +21,8 @@ public class GetItemDetails {
 	WebDriver driver;
 	HomePage homePage;
 	AllCategoriesPage allCategoriesPage;
-	CategoriesOfCategoryPage itemsPage;
+	ItemDetailsPage itemDetailsPage;
 	ItemsOfCategoryPage itemsOfCategoryPage;
-	private int rowIndex = 1;
-	private int blockIndex = 1;
-	private int numOfItems = 4;
-
 	
 	@BeforeClass
 	public void setUp() {
@@ -40,27 +36,27 @@ public class GetItemDetails {
 	public void initializeObjects() {
 		homePage = new HomePage(driver);
 		allCategoriesPage = new AllCategoriesPage(driver);
-		itemsPage = new CategoriesOfCategoryPage(driver);
 		itemsOfCategoryPage = new ItemsOfCategoryPage(driver);
+		itemDetailsPage = new ItemDetailsPage(driver);
 	}
 	
 	@Test
-	public void addToCart(){
+	public void getItemsDetails(){
 		homePage.getAllCategories();
 		allCategoriesPage.getCategory();
-//	    itemsPage.getblock(blockIndex, rowIndex);
-//	    itemsOfCategoryPage.addItemsToCart(numOfItems);
-//	    itemsOfCategoryPage.openCart();
-//	    int cartSize = itemsOfCategoryPage.getCartSize();
-//	    String total = itemsOfCategoryPage.sumPrice(numOfItems);
-//	    String grandTotal = itemsOfCategoryPage.getGrandTotal();
-//	    
-//	    assertEquals(cartSize,numOfItems);
-//	    assertEquals(total+'0',grandTotal);
+		WebElement item = itemsOfCategoryPage.findSingleItem();
+	    String itemTitle = itemsOfCategoryPage.getSindleItemTitle(item);
+	    double itemPrice = itemsOfCategoryPage.getitemPrice(item);
+	    itemsOfCategoryPage.openItemDetailsPage();
+	    String itemTitle2 = itemDetailsPage.getSingleItemTitle();
+	    double itemPrice2 = itemDetailsPage.getSingleItemPrice();
+
+	    assertEquals(itemTitle,itemTitle2);
+	    assertEquals(itemPrice,itemPrice2);
 	}
 	
 	@AfterMethod
 	public void exit() {
-		//driver.quit();
+		driver.quit();
 	}
 }

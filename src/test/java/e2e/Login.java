@@ -30,18 +30,19 @@ public class Login {
 	public void setUp() {
 		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
 		driver = driverManager.getWebDriver();
-		driver.get("https://egypt.souq.com/eg-en/");
-		driver.manage().window().maximize();
+		
 	}
 	
 	@BeforeMethod
 	public void initializeObjects() {
+		driver.get("https://egypt.souq.com/eg-en/");
+		driver.manage().window().maximize();
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		mailPage = new MailPage(driver);
 	}
 	
-	@Test(dataProvider="getData",enabled = true)
+	@Test(dataProvider="getData",enabled = false)
 	public void loginUser(String email,String pass){
 		homePage.clickLogin();
 		loginPage.login(email, pass);
@@ -52,11 +53,12 @@ public class Login {
 	}
 	
 	
-	@Test(dataProvider="getData",enabled=false)
+	@Test(dataProvider="getData",enabled=true)
 	public void forgetPassword(String email,String pass) {
 		homePage.clickLogin();
 		loginPage.forgetPassword(email);
-		//mailPage.getEmailOpened(email, pass);
+		String code = mailPage.getCodeFromMail(email, pass);
+		homePage.switchToParentPage();
 	}
 	
 	@DataProvider
@@ -69,7 +71,7 @@ public class Login {
 		return userData;
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void exit() {
 		//driver.quit();
 	}

@@ -1,6 +1,7 @@
 package pageObjectModel;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -45,5 +46,11 @@ public class HomePage{
 	
 	public String getUserName() {
 		return driver.findElement(userName).getText().toString();
+	}
+	
+	public void switchToParentPage() {
+		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+		driver.close();
+		driver.switchTo().window(tabs2.get(0));
 	}
 }

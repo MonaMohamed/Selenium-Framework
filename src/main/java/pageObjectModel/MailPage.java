@@ -1,5 +1,7 @@
 package pageObjectModel;
 
+import static org.testng.Assert.assertTrue;
+
 import java.awt.Robot;
 import java.util.ArrayList;
 
@@ -9,6 +11,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import junit.framework.Assert;
 
 public class MailPage {
 	
@@ -21,12 +27,18 @@ public class MailPage {
 	
 	private By email = By.xpath("//input[@type='email']");
 	private By nextBtn = By.id("identifierNext");
-	private By password = By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input");
+	private By password = By.xpath("//*[@id='password']/div[1]/div/div[1]/input");
 	private By passNext = By.id("passwordNext");
+	private By messageRow = By.xpath("//tr[@draggable='true']");
+	private By code = By.xpath("//tbody/tr[2]/td/p");
 	
-	public void getEmailOpened(String email,String pass) {
+	public String getCodeFromMail(String email,String pass) {
 		this.getMailPage(email);
 		this.signIn(email,pass);
+		this.openResetPasswordMessage();
+		String code = this.getCode();
+		
+		return code;
 	}
 	
 	public void getMailPage(String email) {
@@ -44,6 +56,9 @@ public class MailPage {
 	}
 	
 	public WebElement getPassword() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(password));
+		
 		return driver.findElement(password);
 	}
 	
@@ -56,8 +71,28 @@ public class MailPage {
 		this.clickNext();
 		tabs2 = new ArrayList<String> (driver.getWindowHandles());
 	    driver.switchTo().window(tabs2.get(tabs2.size()-1));
-		this.getPassword().click();
 		this.getPassword().sendKeys(pass);
 		this.clickPasswordNext();
+	}
+	
+	public WebElement getMessageRow() {
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(messageRow));
+		
+		return driver.findElement(messageRow);
+	}
+	
+	public void openResetPasswordMessage() {
+		WebElement messageRow = this.getMessageRow();
+		String messageHeader = messageRow.getText().toString();
+		assertTrue(messageHeader.contains("Amazon password assistance"));
+		messageRow.click();
+	}
+	
+	public String getCode() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(code));
+		
+		return driver.findElement(code).getText().toString();
 	}
 }

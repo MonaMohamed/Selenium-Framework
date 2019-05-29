@@ -19,6 +19,8 @@ public class ItemsOfCategoryPage{
 	
 	private By addToCartBtn = By.xpath(".//ul[@class='body no-bullet']/li[6]");
 	private By itemCol = By.xpath("//div[@class='column column-block block-grid-large     ']");
+	private By singleItem = By.xpath("//div[@class='column column-block block-grid-large single-item']");
+	private By singleItemTitle = By.xpath(".//h6[@class='title itemTitle']");
 	private By itemPrice = By.xpath(".//h5[@class='price']/span[1]");
 	private By itemTitel = By.xpath(".//h6[@class='title']");
 	private By cartIcon = By.id("mini-cart_topbar");
@@ -40,9 +42,20 @@ public class ItemsOfCategoryPage{
 		}
 		return 0;
 	}
+	public WebElement findSingleItem() {
+		return driver.findElement(singleItem);
+	}
+	
+	public String getSindleItemTitle(WebElement item) {
+		return item.findElement(singleItemTitle).getText();
+	}
 	
 	public String getItemTitle(WebElement item) {
 		return item.findElement(itemTitel).getText();
+	}
+	
+	public void openItemDetailsPage() {
+		driver.findElement(singleItemTitle).click();
 	}
 	
 	public List<WebElement> getItemsList(){
