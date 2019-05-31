@@ -9,6 +9,7 @@
           <include name="exit"/>
           <include name="initializeObjects"/>
           <include name="setUp"/>
+          <include name="loginUser"/>
         </methods>
       </class> <!-- e2e.Login -->
     </classes>

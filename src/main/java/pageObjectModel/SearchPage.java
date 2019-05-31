@@ -6,11 +6,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchPage{
 	WebDriver driver;
@@ -27,7 +24,6 @@ public class SearchPage{
 	private By itemTitle = By.xpath("//h1[@class='itemTitle']");
 	private By itemPrice = By.xpath("//h3[@class='itemPrice']");
 	private By itemDetailsLink = By.xpath("//a[@class='view-product-details sPrimaryLink secondary button expand white tiny']");
-	private By cartCount = By.xpath("//span[@class='cart-item-count-aj show-mini-cart-aj cart-icon-item-count']");
 	
 	public String getSearchText() {
 		return driver.findElement(searchBox).getText();

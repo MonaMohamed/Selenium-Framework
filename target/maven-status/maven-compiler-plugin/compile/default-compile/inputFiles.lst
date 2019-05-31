@@ -5,6 +5,7 @@ C:\automationFrame\src\main\java\pageObjectModel\DailyDealsPage.java
 C:\automationFrame\src\main\java\main\DriverManager.java
 C:\automationFrame\src\main\java\pageObjectModel\RegistrationPage.java
 C:\automationFrame\src\main\java\pageObjectModel\LoginPage.java
+C:\automationFrame\src\main\java\pageObjectModel\AllCategoriesPage.java
 C:\automationFrame\src\main\java\pageObjectModel\VerifyEmailPage.java
 C:\automationFrame\src\main\java\pageObjectModel\ItemDetailsPage.java
 C:\automationFrame\src\main\java\pageObjectModel\CategoriesOfCategoryPage.java
@@ -12,6 +13,7 @@ C:\automationFrame\src\main\java\main\FirefoxDriverManager.java
 C:\automationFrame\src\main\java\main\SafariDriverManger.java
 C:\automationFrame\src\main\java\pageObjectModel\HomePage.java
 C:\automationFrame\src\main\java\main\DriverManagerFactory.java
+C:\automationFrame\src\main\java\pageObjectModel\MailPage.java
 C:\automationFrame\src\main\java\pageObjectModel\ItemsOfCategoryPage.java
 C:\automationFrame\src\main\java\main\IEDriverManager.java
 C:\automationFrame\src\main\java\pageObjectModel\ShoppingCartPage.java

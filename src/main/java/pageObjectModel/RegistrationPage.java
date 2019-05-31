@@ -12,8 +12,6 @@ public class RegistrationPage {
 		this.driver = driver;
 	}
 	
-	private By signUp = By.xpath("//a[@class='login_to_register']");
-	private By loginButton = By.xpath("//button[@class='truncate userNameField']");
 	private By userNameTextBox = By.id("ap_customer_name");
 	private By emailTextBox = By.id("ap_email");
 	private By passwordTextBox = By.name("password");

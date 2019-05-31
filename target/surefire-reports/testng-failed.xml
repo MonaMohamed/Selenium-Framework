@@ -11,14 +11,14 @@
           <include name="exit"/>
         </methods>
       </class> <!-- e2e.AddToCart -->
-      <class name="main.RegistrationSc">
+      <class name="e2e.Login">
         <methods>
+          <include name="forgetPassword" invocation-numbers="0"/>
           <include name="exit"/>
-          <include name="registerNewUser" invocation-numbers="0"/>
           <include name="initializeObjects"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- main.RegistrationSc -->
+      </class> <!-- e2e.Login -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

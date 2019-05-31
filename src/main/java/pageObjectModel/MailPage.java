@@ -2,19 +2,14 @@ package pageObjectModel;
 
 import static org.testng.Assert.assertTrue;
 
-import java.awt.Robot;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import junit.framework.Assert;
 
 public class MailPage {
 	
@@ -30,10 +25,11 @@ public class MailPage {
 	private By password = By.xpath("//*[@id='password']/div[1]/div/div[1]/input");
 	private By passNext = By.id("passwordNext");
 	private By messageRow = By.xpath("//tr[@draggable='true']");
-	private By code = By.xpath("//tbody/tr[2]/td/p");
+	private By code = By.xpath("//tbody/tr[2]/td/p[2]");
+	private By deleteMes = By.xpath("//*[@id=':4']/div[2]/div[1]/div/div[2]/div[3]");
 	
 	public String getCodeFromMail(String email,String pass) {
-		this.getMailPage(email);
+	    this.getMailPage(email);
 		this.signIn(email,pass);
 		this.openResetPasswordMessage();
 		String code = this.getCode();
@@ -56,7 +52,7 @@ public class MailPage {
 	}
 	
 	public WebElement getPassword() {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(password));
 		
 		return driver.findElement(password);
@@ -89,10 +85,22 @@ public class MailPage {
 		messageRow.click();
 	}
 	
+	public void clickDeleteMsg() {
+		 WebDriverWait wait = (WebDriverWait) new WebDriverWait(driver, 100);
+		 wait.until(ExpectedConditions.presenceOfElementLocated(deleteMes));
+
+		driver.findElement(deleteMes).click();
+	}
+	
 	public String getCode() {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		JavascriptExecutor jsx = (JavascriptExecutor)driver;
+        jsx.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        
+        WebDriverWait wait = (WebDriverWait) new WebDriverWait(driver, 100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(code));
 		
-		return driver.findElement(code).getText().toString();
+		String codeStr = driver.findElement(code).getText().toString();
+		this.clickDeleteMsg();
+		return codeStr;
 	}
 }

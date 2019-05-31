@@ -1,6 +1,5 @@
 package pageObjectModel;
 
-
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
@@ -27,7 +26,11 @@ public class LoginPage{
 	private By contBtn    = By.xpath("//input[@id='continue']");
 	private By appEmail = By.id("ap_email");
 	private By tempPassword = By.xpath("//*[@id='authportal-main-section']/div[2]/div/div/div/form/div[2]/div/label/input");
-	
+	private By code = By.name("code");
+	private By codeContBtn = By.xpath("//input[@type='submit']");
+	private By newPassword = By.name("password");
+	private By passCheck = By.name("passwordCheck");
+	private By authErrorMsg = By.id("auth-error-message-box");
 
 	public void clickRegister() {
 		driver.findElement(signUp).click();
@@ -82,6 +85,10 @@ public class LoginPage{
 		this.clickContPass();
 	}
 	
+	public boolean getErrorMsg() {
+		return driver.findElement(authErrorMsg).isDisplayed();
+	}
+	
 	public void getSignPage(String email) {
 		this.getEmail().sendKeys(email);
 		this.submitLogin();
@@ -90,5 +97,16 @@ public class LoginPage{
 		apmail.clear();
 		apmail.sendKeys(email);
 		this.clickContinue();
+	}
+	
+	public void submitCode(String codeStr) {
+		driver.findElement(code).sendKeys(codeStr);
+		driver.findElement(codeContBtn).click();
+	}
+	
+	public void createNewPass(String newPass) {
+		driver.findElement(newPassword).sendKeys(newPass);
+		driver.findElement(passCheck).sendKeys(newPass);
+		this.clickContPass();
 	}
 }

@@ -2,12 +2,12 @@ package pageObjectModel;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class HomePage{
 	WebDriver driver;
@@ -21,6 +21,7 @@ public class HomePage{
 	private By searchBox = By.id("search_value");
 	private By userName = By.id("userNameField_topbar");
 	private By allCategoriesLink = By.xpath("//*[@id='megaMenuNav']/li[1]");
+	private By logout = By.xpath("//ul[@id='userName_topbar']/li[8]");
 	
 	public void clickLogin() {
 		driver.findElement(loginButton).click();
@@ -50,7 +51,14 @@ public class HomePage{
 	
 	public void switchToParentPage() {
 		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
-		driver.close();
+		//driver.close();
 		driver.switchTo().window(tabs2.get(0));
+	}
+	
+	public void logout() {
+		WebElement logoutElem = driver.findElement(logout);
+		this.clickLogin();
+		Actions builder = new Actions(driver);   
+		builder.moveToElement(logoutElem).click().build().perform();
 	}
 }
