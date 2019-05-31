@@ -131,7 +131,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="e2e.RegistrationSc" hash-for-method="registerNewUser(HJWGFPT, 07GAHFS@test.com, 123456, 123456)">registerNewUser(HJWGFPT, 07GAHFS@test.com, 123456, 123456)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="e2e.RegistrationSc" hash-for-method="registerNewUser(X8Z5KOP, MRRI07A@test.com, 123456, 123456)">registerNewUser(X8Z5KOP, MRRI07A@test.com, 123456, 123456)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,7 +168,7 @@
                   </a> <!-- addToCart -->
                   <span class="method-name">addToCart</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [4] but found [3]
-	at e2e.AddToCart.addToCart(AddToCart.java:58)
+	at e2e.AddToCart.addToCart(AddToCart.java:55)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -187,16 +187,17 @@
                   </a> <!-- forgetPassword(souqtest2019@gmail.com, test@1234) -->
                   <span class="method-name">forgetPassword</span>
                   <span class="parameters">(souqtest2019@gmail.com, test@1234)</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@type=&apos;email&apos;]&quot;}
   (Session info: chrome=74.0.3729.169)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-E34GMQO&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50481}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 2f8e0dd6cbe750f521e58eb5b797a4ce
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51620}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
+Session ID: aa1284a8d8bac7e82618c6246424e1c2
+*** Element info: {Using=xpath, value=//input[@type=&apos;email&apos;]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -205,11 +206,14 @@ Session ID: 2f8e0dd6cbe750f521e58eb5b797a4ce
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-	at pageObjectModel.MailPage.getCode(MailPage.java:107)
-	at pageObjectModel.MailPage.getCodeFromMail(MailPage.java:41)
-	at e2e.Login.forgetPassword(Login.java:65)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjectModel.MailPage.getEmail(MailPage.java:47)
+	at pageObjectModel.MailPage.signIn(MailPage.java:66)
+	at pageObjectModel.MailPage.getCodeFromMail(MailPage.java:33)
+	at e2e.Login.forgetPassword(Login.java:62)
 ... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -279,10 +283,10 @@ Session ID: 2f8e0dd6cbe750f521e58eb5b797a4ce
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="registerNewUser(HJWGFPT, 07GAHFS@test.com, 123456, 123456)">
-                  </a> <!-- registerNewUser(HJWGFPT, 07GAHFS@test.com, 123456, 123456) -->
+                  <a name="registerNewUser(X8Z5KOP, MRRI07A@test.com, 123456, 123456)">
+                  </a> <!-- registerNewUser(X8Z5KOP, MRRI07A@test.com, 123456, 123456) -->
                   <span class="method-name">registerNewUser</span>
-                  <span class="parameters">(HJWGFPT, 07GAHFS@test.com, 123456, 123456)</span>
+                  <span class="parameters">(X8Z5KOP, MRRI07A@test.com, 123456, 123456)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -345,38 +349,38 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'forgetPassword')
-data.setCell(0, 2, 'e2e.Login')
-data.setCell(0, 3, 34313);
+data.setCell(0, 1, 'searchForItems')
+data.setCell(0, 2, 'e2e.SearchForItems')
+data.setCell(0, 3, 228696);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addToCart')
-data.setCell(1, 2, 'e2e.AddToCart')
-data.setCell(1, 3, 26212);
+data.setCell(1, 1, 'forgetPassword')
+data.setCell(1, 2, 'e2e.Login')
+data.setCell(1, 3, 111292);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'searchForItems')
-data.setCell(2, 2, 'e2e.SearchForItems')
-data.setCell(2, 3, 17154);
+data.setCell(2, 1, 'addToCart')
+data.setCell(2, 2, 'e2e.AddToCart')
+data.setCell(2, 3, 26353);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginUser')
-data.setCell(3, 2, 'e2e.Login')
-data.setCell(3, 3, 12655);
+data.setCell(3, 1, 'getItemsDetails')
+data.setCell(3, 2, 'e2e.GetItemDetails')
+data.setCell(3, 3, 11830);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'searchForItems')
-data.setCell(4, 2, 'e2e.SearchForItems')
-data.setCell(4, 3, 12054);
+data.setCell(4, 1, 'loginUser')
+data.setCell(4, 2, 'e2e.Login')
+data.setCell(4, 3, 9682);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'getItemsDetails')
-data.setCell(5, 2, 'e2e.GetItemDetails')
-data.setCell(5, 3, 8943);
+data.setCell(5, 1, 'searchForItems')
+data.setCell(5, 2, 'e2e.SearchForItems')
+data.setCell(5, 3, 9584);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'registerNewUser')
 data.setCell(6, 2, 'e2e.RegistrationSc')
-data.setCell(6, 3, 7596);
+data.setCell(6, 3, 7774);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -409,111 +413,111 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">4867 ms</span>
+                <span class="method-start">3583 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">forgetPassword(souqtest2019@gmail.com, test@1234)</span>
-                <span class="method-start">29305 ms</span>
+                <span class="method-start">27355 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">63629 ms</span>
+                <span class="method-start">138665 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginUser(souqtest2019@gmail.com, test@1234)</span>
-                <span class="method-start">67713 ms</span>
+                <span class="method-start">140621 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">exit</span>
-                <span class="method-start">80368 ms</span>
+                <span class="method-start">150304 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">e2e.AddToCart</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">81320 ms</span>
+                <span class="method-start">151098 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">93304 ms</span>
+                <span class="method-start">160828 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addToCart</span>
-                <span class="method-start">93717 ms</span>
+                <span class="method-start">160968 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">exit</span>
-                <span class="method-start">119929 ms</span>
+                <span class="method-start">187321 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">e2e.GetItemDetails</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">120713 ms</span>
+                <span class="method-start">188421 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">131644 ms</span>
+                <span class="method-start">214860 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getItemsDetails</span>
-                <span class="method-start">131647 ms</span>
+                <span class="method-start">214966 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">exit</span>
-                <span class="method-start">140590 ms</span>
+                <span class="method-start">226796 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">e2e.RegistrationSc</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">141330 ms</span>
+                <span class="method-start">227523 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">153263 ms</span>
+                <span class="method-start">237496 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">registerNewUser(HJWGFPT, 07GAHFS@test.com, 123456, 123456)</span>
-                <span class="method-start">153265 ms</span>
+                <span class="method-name">registerNewUser(X8Z5KOP, MRRI07A@test.com, 123456, 123456)</span>
+                <span class="method-start">237549 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">exit</span>
-                <span class="method-start">160861 ms</span>
+                <span class="method-start">245324 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">e2e.SearchForItems</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">161587 ms</span>
+                <span class="method-start">246060 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">174445 ms</span>
+                <span class="method-start">273342 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchForItems(Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue, 1,488.00)</span>
-                <span class="method-start">174446 ms</span>
+                <span class="method-start">273374 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initializeObjects</span>
-                <span class="method-start">191601 ms</span>
+                <span class="method-start">502070 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchForItems(NOKIA 130 Series 30 Grey 2017, 480.00)</span>
-                <span class="method-start">191601 ms</span>
+                <span class="method-start">502070 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">exit</span>
-                <span class="method-start">203655 ms</span>
+                <span class="method-start">511654 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

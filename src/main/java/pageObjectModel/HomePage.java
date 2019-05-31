@@ -8,6 +8,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage{
 	WebDriver driver;
@@ -24,6 +26,9 @@ public class HomePage{
 	private By logout = By.xpath("//ul[@id='userName_topbar']/li[8]");
 	
 	public void clickLogin() {
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+		
 		driver.findElement(loginButton).click();
 	}
 	

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 26 17:09:59 EET 2019</td>
+<td>Started on:</td><td>Fri May 31 17:09:01 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>137 seconds (137317 ms)</td>
+<tr><td>Total time:</td><td>240 seconds (240124 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='e2e.SearchForItems.searchForItems()'><b>searchForItems</b><br>Test class: e2e.SearchForItems<br>Parameters: Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue, 1,499.00</td>
-<td><div><pre>java.lang.AssertionError: expected [1,499.00] but found [1,730.00]
-	at e2e.SearchForItems.searchForItems(SearchForItems.java:55)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace917935693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace917935693'><pre>java.lang.AssertionError: expected [1,499.00] but found [1,730.00]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at e2e.SearchForItems.searchForItems(SearchForItems.java:55)
+<td title='e2e.AddToCart.addToCart()'><b>addToCart</b><br>Test class: e2e.AddToCart</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at pageObjectModel.ItemsOfCategoryPage.addItemsToCart(ItemsOfCategoryPage.java:79)
+	at e2e.AddToCart.addToCart(AddToCart.java:49)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1458621573", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1458621573'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at pageObjectModel.ItemsOfCategoryPage.addItemsToCart(ItemsOfCategoryPage.java:79)
+	at e2e.AddToCart.addToCart(AddToCart.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,21 +113,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>4</td>
-<td>e2e.SearchForItems@3b0143d3</td></tr>
+<td>6</td>
+<td>e2e.AddToCart@4b4523f8</td></tr>
 <tr>
-<td title='e2e.SearchForItems.searchForItems()'><b>searchForItems</b><br>Test class: e2e.SearchForItems<br>Parameters: Nokia 105 -2017 , 4MB , 2G , Blue, 359.00</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+<td title='e2e.Login.forgetPassword()'><b>forgetPassword</b><br>Test class: e2e.Login<br>Parameters: souqtest2019@gmail.com, test@1234</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@type=&apos;email&apos;]&quot;}
   (Session info: chrome=74.0.3729.169)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-E34GMQO&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+System info: host: &apos;DESKTOP-E34GMQO&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55133}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 2345cad0266933c360539e069f8f5edd
-*** Element info: {Using=xpath, value=//h1[@class=&apos;itemTitle&apos;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53954}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
+Session ID: 24c9dd4df5326415d7500c3933872592
+*** Element info: {Using=xpath, value=//input[@type=&apos;email&apos;]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -136,25 +136,26 @@ Session ID: 2345cad0266933c360539e069f8f5edd
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-	at pageObjectModel.SearchPage.findCertainElement(SearchPage.java:54)
-	at e2e.SearchForItems.searchForItems(SearchForItems.java:51)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1904609259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1904609259'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjectModel.MailPage.getEmail(MailPage.java:47)
+	at pageObjectModel.MailPage.signIn(MailPage.java:66)
+	at pageObjectModel.MailPage.getCodeFromMail(MailPage.java:33)
+	at e2e.Login.forgetPassword(Login.java:62)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2085745483", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2085745483'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@type=&apos;email&apos;]&quot;}
   (Session info: chrome=74.0.3729.169)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-E34GMQO&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+System info: host: &apos;DESKTOP-E34GMQO&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55133}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 2345cad0266933c360539e069f8f5edd
-*** Element info: {Using=xpath, value=//h1[@class=&apos;itemTitle&apos;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53954}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
+Session ID: 24c9dd4df5326415d7500c3933872592
+*** Element info: {Using=xpath, value=//input[@type=&apos;email&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -167,13 +168,14 @@ Session ID: 2345cad0266933c360539e069f8f5edd
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-	at pageObjectModel.SearchPage.findCertainElement(SearchPage.java:54)
-	at e2e.SearchForItems.searchForItems(SearchForItems.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjectModel.MailPage.getEmail(MailPage.java:47)
+	at pageObjectModel.MailPage.signIn(MailPage.java:66)
+	at pageObjectModel.MailPage.getCodeFromMail(MailPage.java:33)
+	at e2e.Login.forgetPassword(Login.java:62)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -200,8 +202,8 @@ Session ID: 2345cad0266933c360539e069f8f5edd
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
-<td>e2e.SearchForItems@3b0143d3</td></tr>
+<td>27</td>
+<td>e2e.Login@5a8e6209</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -211,35 +213,30 @@ Session ID: 2345cad0266933c360539e069f8f5edd
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='e2e.AddToCart.addToCart()'><b>addToCart</b><br>Test class: e2e.AddToCart</td>
+<td title='e2e.GetItemDetails.getItemsDetails()'><b>getItemsDetails</b><br>Test class: e2e.GetItemDetails</td>
 <td></td>
-<td>28</td>
-<td>e2e.AddToCart@57536d79</td></tr>
+<td>49</td>
+<td>e2e.GetItemDetails@731a74c</td></tr>
 <tr>
-<td title='api.Test.getCountriesCode()'><b>getCountriesCode</b><br>Test class: api.Test<br>Parameters: US</td>
+<td title='e2e.Login.loginUser()'><b>loginUser</b><br>Test class: e2e.Login<br>Parameters: souqtest2019@gmail.com, test@1234</td>
 <td></td>
-<td>0</td>
-<td>api.Test@5a8e6209</td></tr>
+<td>12</td>
+<td>e2e.Login@5a8e6209</td></tr>
 <tr>
-<td title='api.Test.getCountriesCode()'><b>getCountriesCode</b><br>Test class: api.Test<br>Parameters: DE</td>
+<td title='e2e.RegistrationSc.registerNewUser()'><b>registerNewUser</b><br>Test class: e2e.RegistrationSc<br>Parameters: N6EQIHP, IP3EBPX@test.com, 123456, 123456</td>
 <td></td>
-<td>0</td>
-<td>api.Test@5a8e6209</td></tr>
+<td>7</td>
+<td>e2e.RegistrationSc@369f73a2</td></tr>
 <tr>
-<td title='api.Test.getCountriesCode()'><b>getCountriesCode</b><br>Test class: api.Test<br>Parameters: GB</td>
+<td title='e2e.SearchForItems.searchForItems()'><b>searchForItems</b><br>Test class: e2e.SearchForItems<br>Parameters: Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue, 1,488.00</td>
 <td></td>
-<td>0</td>
-<td>api.Test@5a8e6209</td></tr>
+<td>8</td>
+<td>e2e.SearchForItems@1f28c152</td></tr>
 <tr>
-<td title='api.Test.getCountriesList()'><b>getCountriesList</b><br>Test class: api.Test</td>
+<td title='e2e.SearchForItems.searchForItems()'><b>searchForItems</b><br>Test class: e2e.SearchForItems<br>Parameters: NOKIA 130 Series 30 Grey 2017, 480.00</td>
 <td></td>
-<td>0</td>
-<td>api.Test@5a8e6209</td></tr>
-<tr>
-<td title='main.RegistrationSc.registerNewUser()'><b>registerNewUser</b><br>Test class: main.RegistrationSc<br>Parameters: 0IGRR49, GW7L5EE@test.com, 123456, 123456</td>
-<td></td>
-<td>10</td>
-<td>main.RegistrationSc@6ddf90b0</td></tr>
+<td>7</td>
+<td>e2e.SearchForItems@1f28c152</td></tr>
 </table><p>
 </body>
 </html>
