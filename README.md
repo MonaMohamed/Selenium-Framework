@@ -28,6 +28,7 @@ in this pom.xml to trigger the test.
 
 4. Test Output folders.
 Reports like index.html and testng-results.xml are generated under these folders once the test is run. 
+reportPath = baseDirecotry + "test-output/Extent.html"
 reportPath = baseDirecotry + "target/surefire-reports/index.html"
 reportPath = baseDirecotry + "test-output/emailable-report.html"
 ****************************************************************************************************************************
