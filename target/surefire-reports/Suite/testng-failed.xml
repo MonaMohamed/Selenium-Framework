@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="utility.ExtentReporterNG"/>
+  </listeners>
   <test thread-count="5" verbose="0" name="Test(failed)">
     <classes>
       <class name="e2e.AddToCart">
@@ -11,6 +14,14 @@
           <include name="exit"/>
         </methods>
       </class> <!-- e2e.AddToCart -->
+      <class name="e2e.SearchForItems">
+        <methods>
+          <include name="exit"/>
+          <include name="initializeObjects"/>
+          <include name="setUp"/>
+          <include name="searchForItems" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- e2e.SearchForItems -->
       <class name="e2e.Login">
         <methods>
           <include name="forgetPassword" invocation-numbers="0"/>
