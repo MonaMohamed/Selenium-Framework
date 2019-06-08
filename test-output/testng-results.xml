@@ -1,145 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="7" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="240124" started-at="2019-05-31T15:09:01Z" finished-at="2019-05-31T15:13:01Z">
+  <suite name="Default suite" duration-ms="137928" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:13:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="240124" started-at="2019-05-31T15:09:01Z" finished-at="2019-05-31T15:13:01Z">
-      <class name="e2e.Login">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.Login@5a8e6209]" name="setUp" is-config="true" duration-ms="3822" started-at="2019-05-31T15:09:01Z" finished-at="2019-05-31T15:09:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.Login@5a8e6209]" name="initializeObjects" is-config="true" duration-ms="23793" started-at="2019-05-31T15:09:05Z" finished-at="2019-05-31T15:09:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="FAIL" signature="forgetPassword(java.lang.String, java.lang.String)[pri:0, instance:e2e.Login@5a8e6209]" name="forgetPassword" duration-ms="27648" started-at="2019-05-31T15:09:28Z" data-provider="getData" finished-at="2019-05-31T15:09:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[souqtest2019@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@1234]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='email']"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-E34GMQO', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53954}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 24c9dd4df5326415d7500c3933872592
-*** Element info: {Using=xpath, value=//input[@type='email']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='email']"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-E34GMQO', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Mona\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53954}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 24c9dd4df5326415d7500c3933872592
-*** Element info: {Using=xpath, value=//input[@type='email']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at pageObjectModel.MailPage.getEmail(MailPage.java:47)
-at pageObjectModel.MailPage.signIn(MailPage.java:66)
-at pageObjectModel.MailPage.getCodeFromMail(MailPage.java:33)
-at e2e.Login.forgetPassword(Login.java:62)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgetPassword -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.Login@5a8e6209]" name="initializeObjects" is-config="true" duration-ms="1814" started-at="2019-05-31T15:09:56Z" finished-at="2019-05-31T15:09:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="loginUser(java.lang.String, java.lang.String)[pri:0, instance:e2e.Login@5a8e6209]" name="loginUser" duration-ms="12339" started-at="2019-05-31T15:09:58Z" data-provider="getData" finished-at="2019-05-31T15:10:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[souqtest2019@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@1234]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginUser -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.Login@5a8e6209]" name="exit" is-config="true" duration-ms="731" started-at="2019-05-31T15:10:10Z" finished-at="2019-05-31T15:10:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-      </class> <!-- e2e.Login -->
+    <test name="Default test" duration-ms="137928" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:13:01Z">
       <class name="e2e.SearchForItems">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@1f28c152]" name="setUp" is-config="true" duration-ms="24779" started-at="2019-05-31T15:12:18Z" finished-at="2019-05-31T15:12:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="setUp" is-config="true" duration-ms="30184" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:11:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@1f28c152]" name="initializeObjects" is-config="true" duration-ms="0" started-at="2019-05-31T15:12:44Z" finished-at="2019-05-31T15:12:44Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="initializeObjects" is-config="true" duration-ms="48" started-at="2019-06-08T02:11:14Z" finished-at="2019-06-08T02:11:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@1f28c152]" name="searchForItems" duration-ms="8509" started-at="2019-05-31T15:12:44Z" data-provider="getSearchData" finished-at="2019-05-31T15:12:52Z">
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="searchForItems" duration-ms="32153" started-at="2019-06-08T02:11:14Z" data-provider="getSearchData" finished-at="2019-06-08T02:11:46Z">
           <params>
             <param index="0">
               <value>
@@ -148,14 +24,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[1,488.00]]>
+                <![CDATA[2,550.00]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@1f28c152]" name="searchForItems" duration-ms="7988" started-at="2019-05-31T15:12:52Z" data-provider="getSearchData" finished-at="2019-05-31T15:13:00Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="initializeObjects" is-config="true" duration-ms="1" started-at="2019-06-08T02:11:46Z" finished-at="2019-06-08T02:11:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeObjects -->
+        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="searchForItems" duration-ms="74769" started-at="2019-06-08T02:11:46Z" data-provider="getSearchData" finished-at="2019-06-08T02:13:01Z">
           <params>
             <param index="0">
               <value>
@@ -164,136 +44,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[480.00]]>
+                <![CDATA[488.00]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@1f28c152]" name="initializeObjects" is-config="true" duration-ms="0" started-at="2019-05-31T15:12:52Z" finished-at="2019-05-31T15:12:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@1f28c152]" name="exit" is-config="true" duration-ms="739" started-at="2019-05-31T15:13:00Z" finished-at="2019-05-31T15:13:01Z">
+        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="exit" is-config="true" duration-ms="0" started-at="2019-06-08T02:13:01Z" finished-at="2019-06-08T02:13:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
       </class> <!-- e2e.SearchForItems -->
-      <class name="e2e.GetItemDetails">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.GetItemDetails@731a74c]" name="setUp" is-config="true" duration-ms="26556" started-at="2019-05-31T15:10:44Z" finished-at="2019-05-31T15:11:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.GetItemDetails@731a74c]" name="initializeObjects" is-config="true" duration-ms="131" started-at="2019-05-31T15:11:10Z" finished-at="2019-05-31T15:11:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="getItemsDetails()[pri:0, instance:e2e.GetItemDetails@731a74c]" name="getItemsDetails" duration-ms="49076" started-at="2019-05-31T15:11:10Z" finished-at="2019-05-31T15:11:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getItemsDetails -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.GetItemDetails@731a74c]" name="exit" is-config="true" duration-ms="685" started-at="2019-05-31T15:11:59Z" finished-at="2019-05-31T15:12:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-      </class> <!-- e2e.GetItemDetails -->
-      <class name="e2e.RegistrationSc">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.RegistrationSc@369f73a2]" name="setUp" is-config="true" duration-ms="10113" started-at="2019-05-31T15:12:00Z" finished-at="2019-05-31T15:12:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.RegistrationSc@369f73a2]" name="initializeObjects" is-config="true" duration-ms="4" started-at="2019-05-31T15:12:10Z" finished-at="2019-05-31T15:12:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="registerNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:e2e.RegistrationSc@369f73a2]" name="registerNewUser" duration-ms="7289" started-at="2019-05-31T15:12:10Z" data-provider="getRandomData" finished-at="2019-05-31T15:12:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[N6EQIHP]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IP3EBPX@test.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerNewUser -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.RegistrationSc@369f73a2]" name="exit" is-config="true" duration-ms="699" started-at="2019-05-31T15:12:17Z" finished-at="2019-05-31T15:12:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-      </class> <!-- e2e.RegistrationSc -->
-      <class name="e2e.AddToCart">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.AddToCart@4b4523f8]" name="setUp" is-config="true" duration-ms="25566" started-at="2019-05-31T15:10:11Z" finished-at="2019-05-31T15:10:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.AddToCart@4b4523f8]" name="initializeObjects" is-config="true" duration-ms="6" started-at="2019-05-31T15:10:36Z" finished-at="2019-05-31T15:10:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="FAIL" signature="addToCart()[pri:0, instance:e2e.AddToCart@4b4523f8]" name="addToCart" duration-ms="6398" started-at="2019-05-31T15:10:36Z" finished-at="2019-05-31T15:10:43Z">
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index: 0, Size: 0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-at java.util.ArrayList.rangeCheck(Unknown Source)
-at java.util.ArrayList.get(Unknown Source)
-at pageObjectModel.ItemsOfCategoryPage.addItemsToCart(ItemsOfCategoryPage.java:79)
-at e2e.AddToCart.addToCart(AddToCart.java:49)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.AddToCart@4b4523f8]" name="exit" is-config="true" duration-ms="695" started-at="2019-05-31T15:10:43Z" finished-at="2019-05-31T15:10:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-      </class> <!-- e2e.AddToCart -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

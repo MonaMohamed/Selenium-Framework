@@ -20,9 +20,9 @@ public class AddToCart {
 	DailyDealsPage dailyDealsPage;
 	CategoriesOfCategoryPage itemsPage;
 	ItemsOfCategoryPage itemsOfCategoryPage;
-	private int rowIndex = 2;
+	private int rowIndex = 1;
 	private int blockIndex = 2;
-	private int numOfItems = 4;
+	private int numOfItems = 3;
 
 	
 	@BeforeClass

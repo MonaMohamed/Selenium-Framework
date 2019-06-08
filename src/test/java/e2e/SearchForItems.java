@@ -75,6 +75,6 @@ public class SearchForItems {
 	 
 	 @AfterClass
 	 public void exit() {
-		driver.quit();
+		//driver.quit();
 	}
 }
