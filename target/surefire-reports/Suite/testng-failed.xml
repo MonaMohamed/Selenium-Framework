@@ -6,22 +6,6 @@
   </listeners>
   <test thread-count="5" verbose="0" name="Test(failed)">
     <classes>
-      <class name="e2e.AddToCart">
-        <methods>
-          <include name="setUp"/>
-          <include name="initializeObjects"/>
-          <include name="addToCart"/>
-          <include name="exit"/>
-        </methods>
-      </class> <!-- e2e.AddToCart -->
-      <class name="e2e.SearchForItems">
-        <methods>
-          <include name="exit"/>
-          <include name="initializeObjects"/>
-          <include name="setUp"/>
-          <include name="searchForItems" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- e2e.SearchForItems -->
       <class name="e2e.Login">
         <methods>
           <include name="forgetPassword" invocation-numbers="0"/>

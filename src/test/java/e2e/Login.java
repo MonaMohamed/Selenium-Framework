@@ -82,6 +82,6 @@ public class Login {
 	
 	@AfterClass
 	public void exit() {
-	    driver.quit();
+	   driver.quit();
 	}
 }

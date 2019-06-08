@@ -82,7 +82,7 @@ public class LoginPage{
 		this.clickForgetPassword();
 		this.clickContPass();
 		//this.clickTempPassword();
-		this.clickContPass();
+		//this.clickContPass();
 	}
 	
 	public boolean getErrorMsg() {

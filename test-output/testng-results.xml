@@ -1,61 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="137928" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:13:01Z">
+  <suite name="Default suite" duration-ms="129066" started-at="2019-06-08T02:36:25Z" finished-at="2019-06-08T02:38:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="137928" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:13:01Z">
-      <class name="e2e.SearchForItems">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="setUp" is-config="true" duration-ms="30184" started-at="2019-06-08T02:10:43Z" finished-at="2019-06-08T02:11:13Z">
+    <test name="Default test" duration-ms="129066" started-at="2019-06-08T02:36:25Z" finished-at="2019-06-08T02:38:34Z">
+      <class name="e2e.Login">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:e2e.Login@731a74c]" name="setUp" is-config="true" duration-ms="4030" started-at="2019-06-08T02:36:25Z" finished-at="2019-06-08T02:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="initializeObjects" is-config="true" duration-ms="48" started-at="2019-06-08T02:11:14Z" finished-at="2019-06-08T02:11:14Z">
+        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.Login@731a74c]" name="initializeObjects" is-config="true" duration-ms="8248" started-at="2019-06-08T02:36:29Z" finished-at="2019-06-08T02:36:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="searchForItems" duration-ms="32153" started-at="2019-06-08T02:11:14Z" data-provider="getSearchData" finished-at="2019-06-08T02:11:46Z">
+        <test-method status="PASS" signature="forgetPassword(java.lang.String, java.lang.String)[pri:0, instance:e2e.Login@731a74c]" name="forgetPassword" duration-ms="116753" started-at="2019-06-08T02:36:38Z" data-provider="getData" finished-at="2019-06-08T02:38:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue]]>
+                <![CDATA[souqtest2019@gmail.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[2,550.00]]>
+                <![CDATA[test@1234]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="initializeObjects()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="initializeObjects" is-config="true" duration-ms="1" started-at="2019-06-08T02:11:46Z" finished-at="2019-06-08T02:11:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeObjects -->
-        <test-method status="PASS" signature="searchForItems(java.lang.String, java.lang.String)[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="searchForItems" duration-ms="74769" started-at="2019-06-08T02:11:46Z" data-provider="getSearchData" finished-at="2019-06-08T02:13:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NOKIA 130 Series 30 Grey 2017]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[488.00]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchForItems -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.SearchForItems@2b9627bc]" name="exit" is-config="true" duration-ms="0" started-at="2019-06-08T02:13:01Z" finished-at="2019-06-08T02:13:01Z">
+        </test-method> <!-- forgetPassword -->
+        <test-method status="PASS" signature="exit()[pri:0, instance:e2e.Login@731a74c]" name="exit" is-config="true" duration-ms="0" started-at="2019-06-08T02:38:34Z" finished-at="2019-06-08T02:38:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
-      </class> <!-- e2e.SearchForItems -->
+      </class> <!-- e2e.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
